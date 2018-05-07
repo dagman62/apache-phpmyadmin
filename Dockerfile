@@ -10,6 +10,7 @@ ENV TMP_DIR /tmp
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
   wget \
+  mysql-client \
   && rm -rf /var/lib/apt/lists/* 
 
 
@@ -28,3 +29,5 @@ RUN apt-get purge -y --auto-remove \
   && rm -rf /tmp/*
 
 COPY config.inc.php ${HTTP_PREFIX}/htdocs/phpmyadmin
+
+COPY env.php ${HTTP_PREFIX}/htdocs/info.php
