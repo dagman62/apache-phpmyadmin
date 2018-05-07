@@ -11,7 +11,7 @@ services:
    ports:
     - "8080:80"
    volumes:
-     - apache_log_volume:/usr/local/apache/logs
+     - apachelogs:/usr/local/apache/logs
 
  mysql:
    image: dagman62/mysql:5.7
@@ -19,6 +19,9 @@ services:
    container_name: mysql
    environment:
      MYSQL_ROOT_PASSWORD: "example"
+   volumes:
+     - mysqldata:/var/lib/mysql
 
 volumes:
-  apache_log_volume:
+  apachelogs:
+  mysqldata:
