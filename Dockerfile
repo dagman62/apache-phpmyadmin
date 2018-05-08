@@ -28,3 +28,5 @@ RUN apt-get purge -y --auto-remove \
   && rm -rf /tmp/*
 
 COPY config.inc.php ${HTTP_PREFIX}/htdocs/phpmyadmin
+
+COPY my-httpd.conf  ${HTTP_PREFIX}/conf/httpd.conf
