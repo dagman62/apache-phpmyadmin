@@ -3,7 +3,7 @@ version: '3.1'
 services:
 
  wordpress:
-   image: apache-phpmyadmin 
+   image: dagman62/apache-phpmyadmin 
    links:
      - mysql
    restart: always
