@@ -18,7 +18,7 @@ services:
    restart: always
    container_name: mysql
    environment:
-     MYSQL_ROOT_PASSWORD: "example"
+     MYSQL_ROOT_PASSWORD: "phpmyadmin"
    volumes:
      - mysqldata:/var/lib/mysql
 
